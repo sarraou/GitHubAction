@@ -8,15 +8,12 @@
 
 name: Java CI with Maven
 on: # events que vous allez déclencher
-
-push: # a chaque fois que tu vas faire un push
+  push: # a chaque fois que tu vas faire un push
     branches: [ "main" ]
-
-permissions:
-                                
-contents: read  # permet de lire le dépot
-                                
-checks: write # permet d'écrire
+    
+permissions:                            
+ contents: read  # permet de lire le dépot                    
+ checks: write # permet d'écrire
 
 jobs:
   build:
@@ -36,8 +33,8 @@ jobs:
     - name: Upload target folder report
       uses : actions/upload-artifact@v2
       with:
-      name: rapport de tests
-      path : |
+       name: rapport de tests
+       path : |
           ${{ github.workspace }}/target
           ${{ github.workspace }}/reports
 
