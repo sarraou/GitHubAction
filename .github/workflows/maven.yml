@@ -37,7 +37,9 @@ jobs:
       uses : actions/upload-artifact@v2
       with:
       name: rapport de tests
-      path : ${{ github.workspace }}/target/reports
+      path : |
+          ${{ github.workspace }}/target
+          ${{ github.workspace }}/reports
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
