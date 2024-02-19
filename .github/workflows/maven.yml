@@ -7,7 +7,6 @@
 # documentation.
 
 name: Java CI with Maven
-
 on: # events que vous allez déclencher
 
 push: # a chaque fois que tu vas faire un push
